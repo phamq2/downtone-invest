@@ -665,7 +665,7 @@ window.DTFunding = function DTFunding() {
         <div className="dt-section-eyebrow">
           <span className="dt-section-num">05 / Funding</span>
           <span className="dot"/>
-          <span className="dt-eyebrow dt-fg-soft">$1.46M total · $287.5K open</span>
+          <span className="dt-eyebrow dt-fg-soft">$1.46M total · $225K open</span>
         </div>
 
         <h2 className="dt-h-1" style={{ marginBottom: 24 }}>Funding<br/>Progress.</h2>
@@ -695,8 +695,8 @@ window.DTFunding = function DTFunding() {
             { amount: 471, label: "$471K", category: "SBA Bank Loan",           note: "Secured",                bg: "var(--dt-green)", color: "var(--bg)" },
             { amount: 100, label: "$100K", category: "Credit Line",             note: "Ramp facility",          bg: "var(--dt-green)", color: "var(--bg)" },
             { amount: 400, label: "$400K", category: "Owner Investment",        note: "Personal funds & HELOC", bg: "var(--dt-green)", color: "var(--bg)" },
-            { amount: 212.5, label: "$212.5K", category: "Investor\nRound 1 Commit", note: "Closing",                bg: "var(--dt-mint)",  color: "var(--bg)" },
-            { amount: 87.5, label: "$87.5K", category: "Investor\nRound 1 Open",   note: "In progress",            bg: "var(--accent)",   color: "var(--bg)", highlighted: true },
+            { amount: 275, label: "$275K", category: "Investor\nRound 1 Commit", note: "Closing",                bg: "var(--dt-mint)",  color: "var(--bg)" },
+            { amount: 25, label: "$25K", category: "Investor\nRound 1 Open",   note: "In progress",            bg: "var(--accent)",   color: "var(--bg)", highlighted: true },
             { amount: 200, label: "$200K", category: "Investor\nRound 2 Open",   note: "Not started",            bg: "var(--dt-gray-2)", color: "var(--bg)" }
           ];
 
