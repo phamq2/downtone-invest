@@ -665,7 +665,7 @@ window.DTFunding = function DTFunding() {
         <div className="dt-section-eyebrow">
           <span className="dt-section-num">05 / Funding</span>
           <span className="dot"/>
-          <span className="dt-eyebrow dt-fg-soft">$1.46M total · $287.5K open</span>
+          <span className="dt-eyebrow dt-fg-soft">$1.46M total · $200K open</span>
         </div>
 
         <h2 className="dt-h-1" style={{ marginBottom: 24 }}>Funding<br/>Progress.</h2>
@@ -678,7 +678,7 @@ window.DTFunding = function DTFunding() {
             <div style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
               <span style={{ width: 7, height: 7, background: "var(--accent)", marginTop: 9, flexShrink: 0 }}/>
               <div style={{ color: "rgba(245,241,234,0.80)", lineHeight: 1.55 }}>
-                <strong style={{ fontWeight: 700, color: "var(--fg)" }}>Round 1</strong> targets <span style={{ color: "var(--accent)" }}>$1.26M by September 15, 2026</span>, funding construction, permitting, and development costs.
+                <strong style={{ fontWeight: 700, color: "var(--fg)" }}>Round 1</strong> closed <span style={{ color: "var(--accent)" }}>$1.26M on September 15, 2026</span>, funding construction, permitting, and development costs.
               </div>
             </div>
             <div style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
@@ -694,15 +694,14 @@ window.DTFunding = function DTFunding() {
           const segments = [
             { amount: 471, label: "$471K", category: "SBA Bank Loan",           note: "Secured",                bg: "var(--dt-green)", color: "var(--bg)" },
             { amount: 100, label: "$100K", category: "Credit Line",             note: "Ramp facility",          bg: "var(--dt-green)", color: "var(--bg)" },
-            { amount: 400, label: "$400K", category: "Owner Investment",        note: "Personal funds & HELOC", bg: "var(--dt-green)", color: "var(--bg)" },
-            { amount: 212.5, label: "$212.5K", category: "Investor\nRound 1 Commit", note: "Closing",                bg: "var(--dt-mint)",  color: "var(--bg)" },
-            { amount: 87.5, label: "$87.5K", category: "Investor\nRound 1 Open",   note: "In progress",            bg: "var(--accent)",   color: "var(--bg)", highlighted: true },
+            { amount: 425, label: "$425K", category: "Owner Investment",        note: "Personal funds & HELOC", bg: "var(--dt-green)", color: "var(--bg)" },
+            { amount: 275, label: "$275K", category: "Investor\nRound 1", note: "Closed",                bg: "var(--dt-green)",  color: "var(--bg)" },
             { amount: 200, label: "$200K", category: "Investor\nRound 2 Open",   note: "Not started",            bg: "var(--dt-gray-2)", color: "var(--bg)" }
           ];
 
-          // Two-round raise. Round 1 ($1.26M by September 15) covers everything
-          // through the first open segment; Round 2 ($200K in Q1 2027)
-          // is the final open segment. The boundary is a real segment edge.
+          // Two-round raise. Round 1 ($1.26M, closed Sept 15) covers everything
+          // up to the Round 2 segment; Round 2 ($200K in Q1 2027) is the only
+          // open segment. The boundary is a real segment edge.
           const totalK = segments.reduce((a, s) => a + s.amount, 0);
           const round2K = segments[segments.length - 1].amount;
           const round1K = totalK - round2K;
@@ -721,7 +720,7 @@ window.DTFunding = function DTFunding() {
             <div style={{ position: "relative", height: 54, marginBottom: 12 }}>
               <div style={{ position: "absolute", left: 0, bottom: 0, width: "calc(" + r1pct + "% - 5px)", textAlign: "center" }}>
                 <div className="dt-eyebrow" style={{ color: "var(--fg)" }}>Round 1</div>
-                <div className="dt-serif-it" style={{ fontSize: 12, color: "rgba(245,241,234,0.55)", marginTop: 2, marginBottom: 8, whiteSpace: "nowrap" }}>Closes September 15th</div>
+                <div className="dt-serif-it" style={{ fontSize: 12, color: "rgba(245,241,234,0.55)", marginTop: 2, marginBottom: 8, whiteSpace: "nowrap" }}>Closed September 15th</div>
                 {phaseArrow("var(--fg)")}
               </div>
               <div style={{ position: "absolute", right: 0, bottom: 0, width: "calc(" + (100 - r1pct) + "% - 5px)", textAlign: "center" }}>
